@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>came on ron clicker simulator 99% chatgpt free</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            cursor: wait;
+        }
+
+        @keyframes gaytext {
+            0% { background-color: red; }
+            25% { background-color: yellow; }
+            50% { background-color: green; }
+            75% { background-color: blue; }
+            100% { background-color: purple; }
+        }
+
+        #buttonbox {
+            width: 300px;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            animation: gaytext 30s infinite linear;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #fag {
+            display: none;
+            text-align: center;
+        }
+
+        #came_onron {
+            cursor: pointer;
+        }
+
+        #counter {
+            font-size: large;
+            color: aliceblue;
+        }
+
+        .arrow {
+            position: absolute;
+            width: 100px;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="buttonbox" onclick="startGame()">
+        <p>warning: carto n</p>
+    </div>
+
+    <div id="fag">
+        <img id="came_onron" onclick="eatChip()" src="https://files.catbox.moe/zd43je.png">
+        <p id="counter">eat chip = 0</p>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        let isEating = false;
+
+        function startGame() {
+            const startMusic = new Audio('https://kappa.vgmsite.com/soundtracks/call-of-duty-black-ops-zombies-mob-of-the-dead/niaxjfzirq/01%20-%20Damned.mp3');
+            startMusic.loop = true;
+            startMusic.play();
+
+            document.getElementById("buttonbox").remove();
+            document.querySelectorAll(".arrow").forEach(img => img.remove());
+            
+
+            showBigFaggotLolLolXD();
+            document.removeEventListener("click", handleArrowClick);
+        }
+
+        function showBigFaggotLolLolXD() {
+            document.getElementById("fag").style.display = "block";
+        }
+
+        function handleArrowClick(event) {
+            const buttonbox = document.getElementById("buttonbox");
+            if (buttonbox && buttonbox.contains(event.target)) return;
+
+                const img = document.createElement("img");
+                img.src = "https://pngimg.com/d/red_arrow_PNG20.png";
+                img.classList.add("arrow");
+                img.style.left = `${event.clientX}px`;
+                img.style.top = `${event.clientY}px`;
+
+                const buttonCenterX = window.innerWidth / 2;
+                const buttonCenterY = window.innerHeight / 2;
+                const angle = Math.atan2(buttonCenterY - event.clientY, buttonCenterX - event.clientX) * (180 / Math.PI);
+                img.style.transform = `rotate(${angle}deg)`;
+
+                document.body.appendChild(img);
+        }
+        document.addEventListener("click", handleArrowClick);
+
+
+        function eatChip() {
+        const came_onron = document.getElementById("came_onron");
+
+        if (isEating) return;
+        isEating = true;
+
+        came_onron.src = "https://files.catbox.moe/tmyw0k.gif";
+
+        setTimeout(() => {
+            came_onron.src = "https://files.catbox.moe/zd43je.png";
+            isEating = false; 
+        }, 1000);
+
+        clickCount++;
+        document.getElementById("counter").innerText = `eat chip = ${clickCount}`;
+}
+    </script>
+</body>
+</html>
